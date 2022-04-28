@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NonEqualsOriginDestination</fullName>
+    <active>true</active>
+    <description>Origin and Destiantion can&apos;t be equals.</description>
+    <errorConditionFormula>TEXT(Origin__c)  =  TEXT(Destination__c)</errorConditionFormula>
+    <errorDisplayField>Origin__c</errorDisplayField>
+    <errorMessage>Origin and destination can&apos;t be equals</errorMessage>
+</ValidationRule>

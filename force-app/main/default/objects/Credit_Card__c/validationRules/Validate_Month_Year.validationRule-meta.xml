@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Month_Year</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR( Expiration_Month__c &lt; MONTH(TODAY()), Expiration_Year__c &lt; YEAR(TODAY()))</errorConditionFormula>
+    <errorMessage>The date can&apos;t be lower than current day</errorMessage>
+</ValidationRule>
