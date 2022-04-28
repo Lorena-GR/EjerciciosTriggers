@@ -3,7 +3,6 @@ public class PassengerHelper {
         if (Pattern.matches('[0-9]{8}[A-Z]{1}', inputId)) {
             return true;
         }else{
-            System.debug('El DNI no es valido');
          	return false;
         }
     }
@@ -13,6 +12,8 @@ public class PassengerHelper {
         for(Passenger__c pas : listNews){
             if(validarDNI(pas.ID_Card__c)){
                 setNIF.add(pas.ID_Card__c);
+            }else {
+                pas.ID_Card__c.addError('El DNI no es correcto');
             }
         }
         if(!setNIF.isEmpty()){
